@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paisabada – Your Paisa Journey</title>
+<meta content="Compare &amp; choose Insurance, Mutual Funds, and Loans. Check SIP score, credit score, and more — all in one place." name="description"/>
+<meta content="Paisabada, insurance, mutual funds, term plan, SIP, loans, health insurance, credit score" name="keywords"/>
+<meta content="#00b4b0" name="theme-color"/>
+<!-- Social / WhatsApp preview -->
+<meta content="Paisabada – Start Your Paisa Journey" property="og:title"/>
+<meta content="Check policy benefits instantly • Compare &amp; buy Insurance, Mutual Funds &amp; Loans • Win free SIP worth ₹500" property="og:description"/>
+<meta content="https://www.paisabada.in/assets/paisabada-cover.webp" property="og:image"/>
+<meta content="https://www.paisabada.in/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<link href="assets/WhatsApp Image 2025-08-05 at 23.33.26.webp" rel="icon" type="image/webp"/>
+<style>
+    :root{--teal:#00b4b0;--teal2:#009688;--navy:#001d3d;--bg:#f9fafb;}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#111;line-height:1.45}
+    a{text-decoration:none;color:inherit}
+
+    /* Navbar */
+    .navbar{position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 20px}
+    .logo img{height:44px;object-fit:contain;display:block}
+    .login-btn{border:2px solid #00a6a6;color:#00a6a6;padding:8px 14px;border-radius:10px;font-weight:700}
+    .login-btn:hover{background:#00a6a6;color:#fff}
+
+    /* Hero */
+    .hero-split{background:linear-gradient(90deg,var(--teal),var(--teal2));color:#fff;padding:56px 24px;display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+    .hero-left h1{font-size:2.4rem;font-weight:800;margin-bottom:10px}
+    .hero-left p{font-size:1.08rem;margin-top:6px}
+    .brand .paisa{color:#00f0dc}.brand .bada{color:#fff}
+    .cta-btn{display:inline-block;margin-top:18px;background:#28a745;color:#fff;padding:12px 22px;border-radius:10px;font-weight:700}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-right{text-align:center}
+    .hero-right img{max-width:100%;height:auto;max-height:280px;object-fit:contain}
+
+    /* Funnel strip */
+    .funnel-strip{background:#f4fbfb;padding:28px 0;overflow:hidden}
+    .funnel-container{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 12px}
+    .funnel-card{flex:0 0 88%;max-width:88%;scroll-snap-align:center;background:#fff;border-radius:12px;padding:18px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.08);transition:.2s}
+    .funnel-card:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.12)}
+    .funnel-card img{height:50px;margin-bottom:8px}
+    .funnel-card p{font-weight:700}
+
+    /* Section & grids */
+    .section-title{text-align:center;font-size:20px;font-weight:800;color:var(--navy);margin:32px 0 16px}
+    .category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:14px;max-width:1100px;margin:0 auto;padding:0 16px}
+    .category-box{background:#fff;border-radius:12px;padding:14px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.06);min-height:110px}
+    .category-box img{width:38px;height:38px;margin-bottom:8px}
+    .category-title{font-size:14px;font-weight:600;color:#333}
+
+    /* Why choose */
+    .why-choose{max-width:1100px;margin:30px auto;padding:0 16px}
+    .why-title{text-align:center;font-size:22px;font-weight:800;color:#00344b;margin-bottom:14px}
+    .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (min-width:720px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+    .why-box{display:flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:12px 14px;box-shadow:0 6px 16px rgba(0,0,0,.06)}
+    .why-text{font-weight:600;color:#1f2937}
+
+    /* Brands */
+    .brand-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:1100px;margin:8px auto 0;padding:0 16px}
+    @media (min-width:720px){.brand-grid{grid-template-columns:repeat(4,1fr)}}
+    @media (min-width:1024px){.brand-grid{grid-template-columns:repeat(6,1fr)}}
+    .brand-logo{background:#fff;border-radius:12px;min-height:68px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.06)}
+    .brand-logo img{max-height:32px;opacity:.95;display:block}
+    .disclaimer{max-width:1100px;margin:10px auto 0;color:#475569;font-size:13px;padding:0 16px}
+
+    /* Partner (PoSP) */
+    .hero-section{text-align:center;background:#fff;padding:28px 16px}
+    .hero-section h1{color:#002b5b}
+    .hero-section img{max-width:520px;width:100%;height:auto}
+    #form-container{display:none}
+    .container{max-width:760px;margin:0 auto;padding:0 16px}
+    form label{display:block;margin:10px 0 6px;color:#111}
+    form input, form select{width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px}
+    form button{margin-top:12px;background:var(--teal);color:#fff;border:none;padding:12px 16px;border-radius:8px;font-weight:700;cursor:pointer}
+    .thankyou-msg{display:none;text-align:center}
+    .thankyou-msg .cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+    .thankyou-msg a{padding:10px 14px;border-radius:8px;font-weight:700}
+    .thankyou-msg a:first-child{background:#28a745;color:#fff}
+    .thankyou-msg a:last-child{background:transparent;border:2px solid var(--teal);color:var(--teal)}
+
+    /* Contact */
+    #contact{background:#f0f8f7;padding:40px 16px;font-family:inherit}
+    #contact .wrap{max-width:700px;margin:auto;text-align:center}
+    #contact form .field{width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc}
+    #contact .cta-wa{display:inline-block;margin-top:10px;background:#25D366;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700}
+
+  
+/* ==== Brand grid uniform sizing ==== */
+.brand-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:1100px;margin:8px auto 0;padding:0 16px}
+@media (min-width:640px){.brand-grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:900px){.brand-grid{grid-template-columns:repeat(5,1fr)}}
+.brand-logo{background:#fff;border-radius:12px;min-height:110px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.06);padding:16px}
+.brand-logo img{height:56px;max-width:100%;object-fit:contain;image-rendering:auto}
+@media (max-width:520px){.brand-logo{min-height:96px}.brand-logo img{height:44px}}
+
+
+/* --- patched: ensure logo & hero image show correctly --- */
+.navbar .logo img{display:block;height:44px;max-height:44px;object-fit:contain;}
+.hero-right picture, .hero-right img{display:block;max-width:100%;height:auto;}
+
+</style>
+<style>
+/* --- Fixes (2025-08): logo size, hero image sizing, brand logos consistency --- */
+.navbar .logo img { height: 56px !important; width: auto; object-fit: contain; }
+@media (max-width: 640px){ .navbar .logo img { height: 44px !important; } }
+.hero-right img { max-width: 100%; height: auto; max-height: 420px; object-fit: contain; display:block; margin: 0 auto; }
+/* Brand logos sizing & layout */
+.brand-logo img { max-height: 36px; width: auto; object-fit: contain; display:block; }
+</style><style>
+/* === Overrides (2025-08-10) === */
+.navbar .logo img { height: 52px; }
+@media (max-width: 640px){ .navbar .logo img { height: 42px; } }
+.hero-right img { width: 100%; height: auto; max-height: 520px; object-fit: contain; }
+@media (max-width: 640px){ .hero-right img { max-height: 360px; } }
+.brand-logo img { max-height: 46px; width: auto; }
+</style></head>
+<body>
+<!-- Navbar -->
+<header class="navbar">
+<a class="logo" href="index.html"><img src="https://paisabada.in/assets/paisabada-logo.png" alt="Paisabada Logo" style="height:44px;max-height:44px;object-fit:contain;"></a>
+<a class="login-btn" href="/login">Login</a>
+</header>
+<!-- Hero -->
+<section class="hero hero-split">
+<div class="hero-left">
+<h1>Secure Your Future with <span class="brand"><span class="paisa">Paisa</span><span class="bada">bada</span></span></h1>
+<p>Compare. Choose. Invest.<br/>Insurance, Mutual Funds &amp; Loans – All in One Place.</p>
+<div class="cta-row">
+<a class="cta-btn" href="#contact" id="hero-contact-btn">Start My Paisa Journey</a>
+<a class="cta-btn" href="https://wa.me/918805533001" rel="noopener" style="background:#0ea5e9" target="_blank">Chat on WhatsApp</a>
+</div>
+</div>
+<div class="hero-right">
+  <picture>
+    <source srcset="https://paisabada.in/assets/hero-couple.webp" type="image/webp">
+    <img src="https://paisabada.in/assets/hero-couple.png" alt="Happy couple planning finances with Paisabada" loading="eager" style="max-width:100%;height:auto;max-height:320px;object-fit:contain;">
+  </picture>
+</div>
+</section>
+<!-- Funnel cards -->
+<section class="funnel-strip">
+<div class="funnel-container" id="funnelContainer">
+<a class="funnel-card" href="term-plan.html" rel="noopener" target="_blank">
+<img alt="Term Plan" src="https://img.icons8.com/fluency/48/security-checked.png"/>
+<p>Term Plan Checker</p>
+</a>
+<a class="funnel-card" href="credit-score (1).html" rel="noopener" target="_blank">
+<img alt="Credit Score" src="https://img.icons8.com/fluency/48/bank-card-back-side.png"/>
+<p>Check Credit Score</p>
+</a>
+<a class="funnel-card" href="financial-health.html" rel="noopener" target="_blank">
+<img alt="Financial Health" src="https://paisabada.in/assets/icon-financial-health.png"/>
+<p>Check Financial Health</p>
+</a>
+<a class="funnel-card" href="sip-score.html" rel="noopener" target="_blank">
+<img alt="SIP Eligibility" src="https://img.icons8.com/color/48/investment-portfolio.png"/>
+<p>SIP Eligibility Score</p>
+</a>
+<a class="funnel-card" href="personality (1).html" rel="noopener" target="_blank">
+<img alt="Paisa Quiz" src="https://img.icons8.com/color/48/idea.png"/>
+<p>Paisa Personality Quiz</p>
+</a>
+<a class="funnel-card" href="spin-and-win.html" rel="noopener" target="_blank">
+<img alt="Spin &amp; Win" src="https://img.icons8.com/color/48/gift.png"/>
+<p>Spin &amp; Win ₹500</p>
+</a>
+</div>
+</section>
+<!-- Life & Investment -->
+<div class="section-title">Life &amp; Investment Plans</div>
+<div class="category-grid">
+<a class="category-box" href="term-plan.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/family--v1.png"/>
+<div class="category-title">Term Insurance</div>
+</a>
+<a class="category-box" href="paisabada_term_funnel_mobile_store (1).html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/money-bag.png"/>
+<div class="category-title">Guaranteed Returns</div>
+</a>
+<a class="category-box" href="paisabada_term_funnel_mobile_store (1).html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/child-safe-zone.png"/>
+<div class="category-title">Child Plans</div>
+</a>
+<a class="category-box" href="paisabada_term_funnel_mobile_store (1).html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/elderly-person.png"/>
+<div class="category-title">Retirement Plans</div>
+</a>
+<a class="category-box" href="paisabada_term_funnel_mobile_store (1).html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/sales-performance.png"/>
+<div class="category-title">Tax Saving</div>
+</a>
+<a class="category-box" href="paisabada_term_funnel_mobile_store (1).html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/stock-share.png"/>
+<div class="category-title">ULIPs</div>
+</a>
+</div>
+<!-- Health -->
+<a href="health-insurance.html" rel="noopener" target="_blank"><div class="section-title">Health Insurance</div></a>
+<div class="category-grid">
+<a class="category-box" href="health-insurance-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/heart-with-pulse.png"/>
+<div class="category-title">Health Insurance</div>
+</a>
+<a class="category-box" href="health-insurance-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/family.png"/>
+<div class="category-title">Family Health</div>
+</a>
+<a class="category-box" href="health-insurance-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/conference-call.png"/>
+<div class="category-title">Group Health</div>
+</a>
+</div>
+<!-- General Insurance -->
+<div class="section-title">General Insurance</div>
+<div class="category-grid">
+<a class="category-box" href="gi_funnel_final_combined.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/car.png"/>
+<div class="category-title">Car Insurance</div>
+</a>
+<a class="category-box" href="gi_funnel_final_combined.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/motorcycle.png"/>
+<div class="category-title">2 Wheeler</div>
+</a>
+<a class="category-box" href="gi_funnel_final_combined.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/delivery.png"/>
+<div class="category-title">Commercial Vehicles</div>
+</a>
+<a class="category-box" href="gi_funnel_final_combined.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/home.png"/>
+<div class="category-title">Home Insurance</div>
+</a>
+<a class="category-box" href="gi_funnel_final_combined.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/shop.png"/>
+<div class="category-title">Business Insurance</div>
+</a>
+<a class="category-box" href="gi_funnel_final_combined.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/fire-element.png"/>
+<div class="category-title">Fire Insurance</div>
+</a>
+</div>
+<!-- Mutual Funds -->
+<div class="section-title">Mutual Fund Options</div>
+<div class="category-grid">
+<a class="category-box" href="sip-score.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/investment-portfolio.png"/>
+<div class="category-title">SIP Plans</div>
+</a>
+<a class="category-box" href="paisabada_mutual_fund_funnel_v2.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/money-bag-euro.png"/>
+<div class="category-title">ELSS</div>
+</a>
+<a class="category-box" href="paisabada_mutual_fund_funnel_v2.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/retirement.png"/>
+<div class="category-title">Retirement Funds</div>
+</a>
+<a class="category-box" href="paisabada_mutual_fund_funnel_v2.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/baby.png"/>
+<div class="category-title">Child Funds</div>
+</a>
+<a class="category-box" href="paisabada_mutual_fund_funnel_v2.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/stocks.png"/>
+<div class="category-title">Large Cap</div>
+</a>
+<a class="category-box" href="paisabada_mutual_fund_funnel_v2.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/bar-chart.png"/>
+<div class="category-title">Mid Cap</div>
+</a>
+<a class="category-box" href="paisabada_mutual_fund_funnel_v2.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/graph.png"/>
+<div class="category-title">Small Cap</div>
+</a>
+<a class="category-box" href="paisabada_mutual_fund_funnel_v2.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/split-transaction.png"/>
+<div class="category-title">Balanced Funds</div>
+</a>
+<a class="category-box" href="paisabada_mutual_fund_funnel_v2.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/categorize.png"/>
+<div class="category-title">Thematic Funds</div>
+</a>
+</div>
+<!-- Loans -->
+<div class="section-title">Loan Categories</div>
+<div class="category-grid">
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/money.png"/>
+<div class="category-title">Personal Loan</div>
+</a>
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/business.png"/>
+<div class="category-title">Business Loan</div>
+</a>
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/home.png"/>
+<div class="category-title">Home Loan</div>
+</a>
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/student-center.png"/>
+<div class="category-title">Education Loan</div>
+</a>
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/car.png"/>
+<div class="category-title">Car Loan</div>
+</a>
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/collateral.png"/>
+<div class="category-title">LAP</div>
+</a>
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/gold-bars.png"/>
+<div class="category-title">Gold Loan</div>
+</a>
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/credit-card.png"/>
+<div class="category-title">Credit Card Loan</div>
+</a>
+<a class="category-box" href="loan-funnel-complete.html" rel="noopener" target="_blank">
+<img alt="" src="https://img.icons8.com/color/48/currency-exchange.png"/>
+<div class="category-title">Balance Transfer</div>
+</a>
+</div>
+<!-- Why Choose -->
+<section class="why-choose">
+<div class="why-title">Why Choose Paisabada?</div>
+<div class="why-grid">
+<div class="why-box"><img alt="" src="https://img.icons8.com/color/48/approval--v1.png"/><div class="why-text">Trusted Brands</div></div>
+<div class="why-box"><img alt="" src="https://img.icons8.com/color/48/combo-chart--v1.png"/><div class="why-text">Instant Plan Comparison</div></div>
+<div class="why-box"><img alt="" src="https://img.icons8.com/color/48/online-support.png"/><div class="why-text">Real-Time Assistance</div></div>
+<div class="why-box"><img alt="" src="https://img.icons8.com/color/48/web-money.png"/><div class="why-text">Zero Commission Charges</div></div>
+<div class="why-box"><img alt="" src="https://img.icons8.com/color/48/automatic.png"/><div class="why-text">100% Paperless Process</div></div>
+<div class="why-box"><img alt="" src="https://img.icons8.com/color/48/wallet--v1.png"/><div class="why-text">Lowest Premium Quotes</div></div>
+</div>
+</section>
+<!-- Brands -->
+<div class="section-title">Trusted by Leading Financial Brands</div>
+<div class="brand-grid"><div class="brand-logo"><img alt="LIC" src="assets/logos/lic.webp"/></div><div class="brand-logo"><img alt="HDFC Life" src="assets/logos/hdfc-life.webp"/></div><div class="brand-logo"><img alt="ICICI Prudential Life" src="assets/logos/icici-pru-life.webp"/></div><div class="brand-logo"><img alt="SBI Life" src="assets/logos/sbi-life.webp"/></div><div class="brand-logo"><img alt="Tata AIA" src="assets/logos/tata-aia.webp"/></div><div class="brand-logo"><img alt="Bajaj Allianz" src="assets/logos/bajaj-allianz.webp"/></div><div class="brand-logo"><img alt="HDFC Mutual Fund" src="assets/logos/hdfc-mf.webp"/></div><div class="brand-logo"><img alt="ICICI Mutual Fund" src="assets/logos/icici-mf.webp"/></div><div class="brand-logo"><img alt="Mirae Asset" src="assets/logos/mirae.webp"/></div><div class="brand-logo"><img alt="Axis Mutual Fund" src="assets/logos/axis-mf.webp"/></div><div class="brand-logo"><img alt="Nippon India Mutual Fund" src="assets/logos/nippon.webp"/></div><div class="brand-logo"><img alt="HDFC Bank" src="assets/logos/hdfc-bank.webp"/></div><div class="brand-logo"><img alt="ICICI Bank" src="assets/logos/icici-bank.webp"/></div><div class="brand-logo"><img alt="Bajaj Finserv" src="assets/logos/bajaj-fin.webp"/></div><div class="brand-logo"><img alt="Tata Capital" src="assets/logos/tata-capital.webp"/></div><div class="brand-logo"><img alt="IndusInd Bank" src="assets/logos/indusind.webp"/></div></div>
+<div class="disclaimer">*Disclaimer: All brand logos are for representation only. Paisabada works with licensed partners and may not be directly affiliated with every brand.</div>
+<!-- Partner PoSP -->
+<div class="hero-section">
+<h1>Join as a Paisabada Partner</h1>
+<p>Earn from insurance, mutual funds &amp; loans. No office needed. Just your smartphone.</p>
+<button onclick="document.getElementById('form-container').style.display='block'; document.getElementById('form-container').scrollIntoView({behavior:'smooth'});">Become a PoSP</button>
+<p style="margin-top:10px;">IRDAI certified | 100% online onboarding</p>
+<img alt="Paisabada Partner" src="https://paisabada.in/assets/posp-illustration.png"/>
+</div>
+<div id="form-container">
+<div class="container">
+<form id="pospForm">
+<label>Full Name</label><input required="" type="text"/>
+<label>Mobile Number</label><input required="" type="tel"/>
+<label>Email ID</label><input required="" type="email"/>
+<label>City</label><input required="" type="text"/>
+<label>Occupation</label>
+<select required="">
+<option value="">Select Occupation</option>
+<option>Student</option><option>Housewife</option><option>Salaried</option>
+<option>Working Professional</option><option>Self-employed</option><option>Retired</option>
+</select>
+<label>Education</label><input required="" type="text"/>
+<label>Age</label><input required="" type="number"/>
+<label>Expected Monthly Income</label><input required="" type="text"/>
+<button type="submit">Submit</button>
+</form>
+<div class="thankyou-msg" id="thankyou">
+<img alt="Thank You" src="https://paisabada.in/assets/thank-you-posp.png"/>
+<p>🎉 Thanks for joining Paisabada!<br/>Our expert will call you shortly to help start your PoSP journey.</p>
+<div class="cta-btns">
+<a href="https://paisabada.in">Explore More Plans</a>
+<a href="https://wa.me/917620444000?text=Hi%20Paisabada%2C%20I%20have%20joined%20as%20PoSP.%20Please%20assist%20me." rel="noopener" target="_blank">Talk on WhatsApp</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact -->
+<section id="contact">
+<div class="wrap">
+<h2 style="color:#002b5b;font-size:26px;">Let's Get in Touch</h2>
+<p style="color:#333;font-size:16px;margin-bottom:18px">Have questions? We're just a message away.</p>
+<form action="mailto:contact@paisabada.in" enctype="text/plain" method="post" style="text-align:left">
+<input class="field" name="Name" placeholder="Your Name" required="" type="text"/>
+<input class="field" name="Mobile" placeholder="Mobile Number" required="" type="tel"/>
+<input class="field" name="Email" placeholder="Email ID (optional)" type="email"/>
+<textarea class="field" name="Message" placeholder="Your Message" rows="4"></textarea>
+<button class="cta-btn" style="border:none" type="submit">Send Message</button>
+</form>
+<p style="margin:16px 0;font-weight:700">OR</p>
+<a class="cta-wa" href="https://wa.me/917620444000?text=Hi%20Paisabada%2C%20I%20have%20a%20query." rel="noopener" target="_blank">💬 Chat with Team Paisabada</a>
+<hr style="margin:28px 0;border:0;border-top:1px solid #ddd"/>
+<p style="font-size:14px;color:#555">Powered by <strong>Wealtrix Fintech Pvt Ltd</strong></p>
+<div style="margin-top:10px">
+<a href="https://facebook.com/paisabada" style="margin:0 8px" target="_blank"><img src="https://img.icons8.com/ios-filled/24/000000/facebook--v1.png"/></a>
+<a href="https://instagram.com/paisabada" style="margin:0 8px" target="_blank"><img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png"/></a>
+<a href="https://linkedin.com/company/paisabada" style="margin:0 8px" target="_blank"><img src="https://img.icons8.com/ios-filled/24/000000/linkedin.png"/></a>
+<a href="https://youtube.com/@paisabada" style="margin:0 8px" target="_blank"><img src="https://img.icons8.com/ios-filled/24/000000/youtube-play.png"/></a>
+</div>
+</div>
+</section>
+<script>
+    // Smooth scroll from hero CTA
+    document.addEventListener("DOMContentLoaded", function(){
+      const cta=document.getElementById("hero-contact-btn");
+      const contact=document.getElementById("contact");
+      if(cta&&contact){
+        cta.addEventListener("click", function(e){
+          e.preventDefault(); contact.scrollIntoView({behavior:"smooth"});
+        });
+      }
+    });
+
+    // Auto scroll funnel
+    (function(){
+      const container=document.getElementById('funnelContainer'); if(!container) return;
+      let i=0;
+      setInterval(()=>{
+        const cards=container.querySelectorAll('.funnel-card'); if(cards.length===0) return;
+        const w=(cards[0].offsetWidth||280)+18; i=(i+1)%cards.length;
+        container.scrollTo({left:i*w,behavior:'smooth'});
+      }, 2200);
+    })();
+
+    // PoSP form thank-you
+    (function(){
+      const form=document.getElementById('pospForm'); const ty=document.getElementById('thankyou');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault(); form.style.display='none'; ty.style.display='block'; ty.scrollIntoView({behavior:'smooth'});
+      });
+    })();
+  </script>
+</body>
+</html>
